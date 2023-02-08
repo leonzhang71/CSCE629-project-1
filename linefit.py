@@ -11,10 +11,3 @@ with open("examples_of_instances", 'rb') as f:
     obj = pkl.load(f)
     #this part is to use obj["x_list"][0][0] to pick up the value for data file
     print(obj["x_list"][0][0])
-
-
-
-'''
-f = open("examples_of_instances", "rb")
-print(f.read())
-'''
