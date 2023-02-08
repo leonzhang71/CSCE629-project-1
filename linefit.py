@@ -9,5 +9,18 @@
 import pickle as pkl
 with open("examples_of_instances", 'rb') as f:
     obj = pkl.load(f)
+
+    #that line print all list and data set
+    #print(obj)
+    
+    #that line print special 'list' with full data set
+    #print(obj["x_list"])
+
+    #that line print the len() special data set in that list
+    #print (len(obj["x_list"][1]))
+
     #this part is to use obj["x_list"][0][0] to pick up the value for data file
     print(obj["x_list"][0][0])
+
+
+
