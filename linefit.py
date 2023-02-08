@@ -20,7 +20,17 @@ with open("examples_of_instances", 'rb') as f:
     #print (len(obj["x_list"][1]))
 
     #this part is to use obj["x_list"][0][0] to pick up the value for data file
-    print(obj["x_list"][0][0])
+    #print(obj["x_list"][0][0])
+
+print(len(obj["x_list"][0]))
+
+#print(obj["x_list"][0])
+
+#using loop to find and print every element for obj["x_list"][0])
+i = 0
+for i in range (len(obj["x_list"][0])):
+    print(float(obj["x_list"][0][i]))
+
 
 
 
