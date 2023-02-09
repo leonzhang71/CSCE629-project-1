@@ -25,11 +25,31 @@ import matplotlib.pyplot as plt
 with open("examples_of_instances", 'rb') as f:
     obj = pkl.load(f)
 
+'''
+#O(n^2) to find all element in one list
+i = 0
+j = 0
+for i in range (len(obj["x_list"])):
+    for j in range (len(obj["x_list"][i])):
+        print("x=", float(obj["x_list"][i][j]))
+'''
 
+#list for x,y
 x_list_copy = [x for sublist in obj["x_list"] for x in sublist]
+print(len(x_list_copy))
 y_list_copy = [y for sublist in obj["y_list"] for y in sublist]
+print(len(y_list_copy))
+
+#how to get data from n,c
+print(len(obj["n_list"]))
+print(obj["n_list"][0])
+
+print(len(obj["C_list"]))
+print(obj["C_list"][0])
+
 
 '''
+#print every x for the list
 for x in x_list_copy:
     print("x=", float(x))
 
