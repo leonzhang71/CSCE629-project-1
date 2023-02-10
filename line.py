@@ -56,14 +56,14 @@ for c in obj["C_list"]:
     print("C =", c)
 '''
 
-'''
+
 #print every x for the list
 for x in x_list_copy:
     print("x=", float(x))
 
 for y in y_list_copy:
     print("y=", float(y))
-'''
+
 
 
 #entire plot
