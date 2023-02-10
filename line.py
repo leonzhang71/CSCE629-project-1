@@ -23,7 +23,7 @@ for i in range (len(obj["x_list"])):
 
 
 import pickle as pkl
-import matplotlib.pyplot as plt
+from matplotlib import pyplot as plt
 
 with open("examples_of_instances", 'rb') as f:
     obj = pkl.load(f)
@@ -65,13 +65,13 @@ for y in y_list_copy:
     print("y=", float(y))
 '''
 
-#print(obj["n_list"][0])
+
+#entire plot
 #plt.scatter(x_list_copy,y_list_copy, c = 'red')
 #plt.show()
 
+#first x y set
 x = obj["x_list"][0]
 y = obj["y_list"][0]
-
-
 plt.scatter(x, y, c = 'red')
 plt.show()
