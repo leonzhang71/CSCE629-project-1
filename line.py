@@ -64,7 +64,13 @@ for x in x_list_copy:
 for y in y_list_copy:
     print("y=", float(y))
 '''
-print(obj["n_list"][0])
-plt.scatter(x_list_copy,y_list_copy, c = 'red')
-plt.show()
 
+#print(obj["n_list"][0])
+#plt.scatter(x_list_copy,y_list_copy, c = 'red')
+#plt.show()
+
+x = obj["x_list"][0]
+y = obj["y_list"][0]
+
+plt.scatter(x, y, c = 'red')
+plt.show()
