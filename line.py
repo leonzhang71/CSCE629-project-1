@@ -16,6 +16,9 @@ print(obj["x_list"][0][0])
 print(len(obj["x_list"][0]))
 print(obj["y_list"][0])
 using loop to find and print every element for obj["x_list"][0])
+for i in range (len(obj["x_list"])):
+    for j in range (len(obj["x_list"][i])):
+        print("x=", float(obj["x_list"][i][j]))
 '''
 
 
@@ -36,17 +39,22 @@ for i in range (len(obj["x_list"])):
 
 #list for x,y
 x_list_copy = [x for sublist in obj["x_list"] for x in sublist]
-print(len(x_list_copy))
+#print(len(x_list_copy))
 y_list_copy = [y for sublist in obj["y_list"] for y in sublist]
-print(len(y_list_copy))
+#print(len(y_list_copy))
 
+'''
 #how to get data from n,c
 print(len(obj["n_list"]))
 print(obj["n_list"][0])
+for n in obj["n_list"]:
+    print("n =", n)
 
 print(len(obj["C_list"]))
 print(obj["C_list"][0])
-
+for c in obj["C_list"]:
+    print("C =", c)
+'''
 
 '''
 #print every x for the list
@@ -56,7 +64,7 @@ for x in x_list_copy:
 for y in y_list_copy:
     print("y=", float(y))
 '''
-
+print(obj["n_list"][0])
 plt.scatter(x_list_copy,y_list_copy, c = 'red')
 plt.show()
 
