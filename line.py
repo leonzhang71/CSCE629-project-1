@@ -39,9 +39,9 @@ for i in range (len(obj["x_list"])):
 
 #list for x,y
 x_list_copy = [x for sublist in obj["x_list"] for x in sublist]
-#print(len(x_list_copy))
+print(len(x_list_copy))
 y_list_copy = [y for sublist in obj["y_list"] for y in sublist]
-#print(len(y_list_copy))
+print(len(y_list_copy))
 
 '''
 #how to get data from n,c
@@ -71,6 +71,7 @@ for y in y_list_copy:
 
 x = obj["x_list"][0]
 y = obj["y_list"][0]
+
 
 plt.scatter(x, y, c = 'red')
 plt.show()
