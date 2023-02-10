@@ -39,9 +39,9 @@ for i in range (len(obj["x_list"])):
 
 #list for x,y
 x_list_copy = [x for sublist in obj["x_list"] for x in sublist]
-print(len(x_list_copy))
+#print(len(x_list_copy))
 y_list_copy = [y for sublist in obj["y_list"] for y in sublist]
-print(len(y_list_copy))
+#print(len(y_list_copy))
 
 '''
 #how to get data from n,c
@@ -56,14 +56,14 @@ for c in obj["C_list"]:
     print("C =", c)
 '''
 
-
+'''
 #print every x for the list
 for x in x_list_copy:
     print("x=", float(x))
 
 for y in y_list_copy:
     print("y=", float(y))
-
+'''
 
 
 #entire plot
