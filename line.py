@@ -70,3 +70,80 @@ y_list_copy = [y for sublist in obj["y_list"] for y in sublist]
 #print(len(y_list_copy))
 
 
+def summationX(x,n):
+    totalX = 0
+    for i in range (n):
+        totalX = totalX + x[i]
+    return totalX
+
+def summationX2(x,n):
+    totalX2 = 0
+    for i in range (n):
+        totalX2 = totalX2 + x[i]**2
+    return totalX2
+
+def summationY(y,n):
+    totalY  = 0
+    for i in range (n):
+        totalY  = totalY + y[i]
+    return totalY
+
+def summationXY(x,y,n):
+    totalXY = 0
+    xy = 0
+    for i in range (n):
+        xy = x[i] * y[i]
+        totalXY = totalXY + xy
+    return totalXY
+
+def functionA(x,y,n):
+    sumX = summationX(x,n)
+    sumY = summationY(y,n)
+    sumXY = summationXY(x,y,n)
+    sumX2 = summationX2(x,n)
+    valueA = (n*(sumXY) - sumX*sumY)/(n*(sumX2)-(sumX)**2)
+    return valueA
+
+def functionB(x,y,n):
+    sumX = summationX(x,n)
+    sumY = summationY(y,n)
+    valueB = (sumX - sumY)/n
+    return valueB
+
+def errorL(x,y,n):
+    sumX = summationX(x,n)
+    sumY = summationY(y,n)
+    valueA = functionA(x,y,n)
+    valueB = functionB(x,y,n)
+
+    errorValue = (sumY - valueA*sumX - valueB)
+
+    return errorValue
+
+
+def main():
+    nbest = 31
+    n1 = 1
+    n2 = 2
+    n3 = 3
+    n4 = 4
+    n5 = 5
+    n6 = 6 
+    resulterrorbest = errorL(x_list_copy,y_list_copy,nbest)
+    print("best fit =", resulterrorbest)
+    resulterror2 = errorL(x_list_copy,y_list_copy,n2)
+    print("n is 2 =", resulterror2)
+    resulterror3 = errorL(x_list_copy,y_list_copy,n3)
+    print("n is 3 =", resulterror3)
+    resulterror4 = errorL(x_list_copy,y_list_copy,n4)
+    print("n is 4 =", resulterror4)
+    resulterror5 = errorL(x_list_copy,y_list_copy,n5)
+    print("n is 5 =", resulterror5)
+    resulterror6 = errorL(x_list_copy,y_list_copy,n6)
+    print("n is 6 =", resulterror6)
+
+
+
+
+if __name__ == "__main__":
+    main()
