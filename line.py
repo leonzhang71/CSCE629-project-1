@@ -120,10 +120,6 @@ def errorL(x,y,n):
 
     return errorValue
 
-
-def main():
-    nbest = 31
-    n1 = 1
     n2 = 2
     n3 = 3
     n4 = 4
@@ -141,6 +137,33 @@ def main():
     print("n is 5 =", resulterror5)
     resulterror6 = errorL(x_list_copy,y_list_copy,n6)
     print("n is 6 =", resulterror6)
+
+def main():
+    i = 2
+    n = 94
+    nbest = 31
+    kline = 0
+
+    for i in range (n):
+        try: 
+            Evalue = errorL(x_list_copy,y_list_copy,i)
+            print("n =", i, " ,error value=",Evalue)
+        except ZeroDivisionError:
+            print("Warning: division by zero at i =", i)
+
+    
+    for i in range (n):
+        partition_list = []
+        try:
+            if errorL(x_list_copy,y_list_copy,i) > errorL(x_list_copy,y_list_copy,i+1):
+                partition_list.append(i)
+                kline = kline + 1
+                print("line =", kline, ",end point =" ,i)
+        except ZeroDivisionError:
+            print("Warning: division by zero at i =", i)
+
+
+
 
 
 
